@@ -12,8 +12,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "bootstrap": "^5.2.3",
+    "firebase": "^9.17.1",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.7.2",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.7.1",
+    "react-router-dom": "^6.8.1",
+    "yup": "^1.0.1"
   },
   "jest": {
     "moduleNameMapper": {
