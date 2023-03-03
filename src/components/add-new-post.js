@@ -4,15 +4,27 @@ import {
     Form
   } from "react-bootstrap";
   import React, { useState, useEffect } from "react";
+  import  {Link, useNavigate} from 'react-router-dom';
+
   import db from "../lib/firebase";
   
   const AddNewPost = () => {
+    const navigate = useNavigate();
     const [title, setTitle] = useState("");
     const [isSaving, setSaving] = useState(false);
     const [show, setShow] = useState(false);
+    const isLogin = localStorage.getItem("login");
     const [validTitle, setValidTitle] = useState(true);
     const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+    // const handleShow = () => setShow(true);
+    const handleShowIfLogin = () =>{
+      if(!isLogin){
+          alert("you are not logged in");
+           navigate("/login");
+      }else{
+        setShow(true);
+      }
+    }
 
     const handleSubmit = async () => {
       if(title.trim()){
@@ -35,7 +47,7 @@ import {
   
     return (
       <>
-        <Button variant="light" onClick={handleShow}>
+        <Button variant="light" onClick={handleShowIfLogin}>
           Add new post
         </Button>
 

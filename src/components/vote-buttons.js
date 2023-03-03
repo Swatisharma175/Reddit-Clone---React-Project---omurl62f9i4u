@@ -104,12 +104,12 @@ const VoteButtons = ({ post }) => {
           size="lg"
           aria-label="Upvote"
           disabled
-          ><FiArrowUp /></Button>:  <Button
+          ><FiArrowDown /></Button>:  <Button
           className="m-1"
           size="lg"
           aria-label="Upvote"
           onClick={() => handleClick("downvote")}
-          ><FiArrowUp /></Button>}
+          ><FiArrowDown /></Button>}
         <p>
           {post.downVotesCount}
         </p>

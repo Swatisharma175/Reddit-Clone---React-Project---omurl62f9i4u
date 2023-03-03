@@ -16,7 +16,7 @@ const Navbar = () => {
     <Nav fixed="top" bg="danger">
     <Container>
 
-      <Nav.Brand href="#home">{(isLogin) ? "Hi "+ localStorage.getItem("name") + ", Welcome to " : " " } Reddit.com</Nav.Brand>
+      <Nav.Brand href="#home" id="navbar">{(isLogin) ? "Hi "+ localStorage.getItem("name") + ", Welcome to " : " " } Reddit.com</Nav.Brand>
       <Nav.Toggle />
       <Nav.Collapse className="justify-content-end">
           
